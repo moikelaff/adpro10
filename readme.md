@@ -1,0 +1,2 @@
+### 1.2
+First message ("hey hey!"), Second message ("howdy!"), hird message ("done!"). The "hey hey!" message appears first even though it was called after the spawner, this is because the compiler executes this code the immediately after spawning the async spawner.
