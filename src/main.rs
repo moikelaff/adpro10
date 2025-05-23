@@ -102,9 +102,20 @@ fn main() {
     // Spawn a task to print before and after waiting on a timer.
     spawner.spawn(async {
         println!("dylan's pc: howdy!");
-        // Wait for our timer future to complete after two seconds.
         TimerFuture::new(Duration::new(2, 0)).await;
         println!("dylan's pc: done!");
+    });
+
+    spawner.spawn(async {
+        println!("dylan's pc: howdy2!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("dylan's pc: done2!");
+    });
+
+    spawner.spawn(async {
+        println!("dylan's pc: howdy2!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("dylan's pc: done2!");
     });
 
     println!("dylan's pc: hey hey!");
